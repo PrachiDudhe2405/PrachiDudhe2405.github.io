@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Prachi Dudhe · Portfolio</title>
+  <meta name="description" content="Personal portfolio website for Prachi Dudhe" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#FFFFFF; --card:#FDFDFD; --muted:#6B7280; --fg:#1F1F1F; --accent:#500000;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--fg)}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1100px;margin:0 auto;padding:0 20px}
+    header{position:sticky;top:0;background:rgba(255,255,255,.9);backdrop-filter:saturate(180%) blur(8px);z-index:50;border-bottom:1px solid rgba(0,0,0,.06)}
+    nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
+    nav .links a{padding:8px 12px;border-radius:10px;color:var(--muted)}
+    nav .links a:hover, nav .links a.active{background:rgba(80,0,0,.08);color:var(--accent)}
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center;padding:64px 0}
+    .pill{display:inline-flex;gap:8px;align-items:center;padding:6px 10px;border:1px solid rgba(0,0,0,.12);border-radius:999px;color:var(--muted)}
+    .title{font-size:40px;line-height:1.1;margin:14px 0 10px;color:var(--accent)}
+    .subtitle{color:var(--muted);font-size:18px}
+    .cta{display:flex;gap:12px;margin-top:18px}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 16px;border-radius:12px;border:1px solid rgba(0,0,0,.14);}
+    .btn.primary{background:var(--accent);color:#fff;border:none;font-weight:700}
+    .grid{display:grid;gap:16px}
+    .two{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .three{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .card{background:var(--card);border:1px solid rgba(0,0,0,.08);border-radius:18px;padding:18px}
+    .card h3{margin:10px 0 6px;font-size:18px;color:var(--accent)}
+    .muted{color:var(--muted)}
+    section{padding:56px 0;border-top:1px solid rgba(0,0,0,.06)}
+    .skill{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border:1px solid rgba(0,0,0,.12);border-radius:999px;margin:6px 6px 0 0;color:var(--muted)}
+    .footer{padding:30px 0;color:var(--muted);text-align:center;border-top:1px solid rgba(0,0,0,.06)}
+    img.avatar{width:220px;height:220px;border-radius:22px;border:3px solid var(--accent);object-fit:cover}
+    @media (max-width:900px){.hero{grid-template-columns:1fr}.two{grid-template-columns:1fr}.three{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <a href="#home" class="logo" style="font-weight:800;color:var(--accent)">Prachi Dudhe</a>
+        <div class="links">
+          <a href="#about" class="active">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+          <a href="resume.pdf" target="_blank" rel="noopener">Resume</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home" class="container">
+    <section class="hero">
+      <div>
+        <span class="pill">👋 Hello!</span>
+        <h1 class="title">I’m Prachi Dudhe</h1>
+        <p class="subtitle">I engineer ML pipelines that scale, and models that mostly cooperate after a little persuasion.</p>
+        <div class="cta">
+          <a class="btn primary" href="#projects">See my projects</a>
+          <a class="btn" href="#contact">Contact me</a>
+        </div>
+      </div>
+      <div style="display:flex;justify-content:center">
+        <img class="avatar" src="assets/IMG_8218.jpeg" alt="Prachi Dudhe profile photo" />
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="grid two">
+        <div class="card">
+          <h2>About</h2>
+          <p class="muted">👋 Hi, I’m Prachi Dudhe. A data science enthusiast who enjoys turning messy datasets into clean insights and occasionally convincing stubborn models to cooperate. I specialize in data analysis, machine learning, and AI, with hands-on experience across Python, SQL, pandas, scikit-learn, TensorFlow, and PyTorch.</p>
+          <p class="muted">My academic background in Electronics and Telecommunication with Honors in Data Science and my current Master’s in Data Science at Texas A&M University give me both the theoretical grounding and the practical exposure to tackle end-to-end problems from preprocessing data to delivering results through dashboards and predictive models.</p>
+          <p class="muted">I’m especially curious about how AI can solve real-world challenges at scale, whether in business, research, or everyday life. I’m currently exploring opportunities in data science, ML engineering, and AI research, particularly with teams that thrive on impact and fast iteration.</p>
+          <p class="muted">Outside of work, you’ll probably find me swimming, hunting down the best local coffee shops, or binge-watching shows I swore I’d only watch one episode of.</p>
+        </div>
+        <div class="card">
+          <h2>Highlights</h2>
+          <ul class="muted">
+            <li>Built a RAG search prototype indexing ~24k docs with +31% recall@10 improvement.</li>
+            <li>Designed “Optimizer” to auto-assign operators to stations from attendance & cycle times.</li>
+            <li>Analyzed Redhawk desert trip telemetry, flagged thermal exceedances, and produced daily reports.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div>
+        <span class="skill">Python</span>
+        <span class="skill">Pandas</span>
+        <span class="skill">scikit-learn</span>
+        <span class="skill">TensorFlow/PyTorch</span>
+        <span class="skill">SQL</span>
+        <span class="skill">Power BI</span>
+        <span class="skill">Tableau</span>
+        <span class="skill">Docker</span>
+        <span class="skill">Git/GitHub</span>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="grid three">
+        <article class="card">
+          <h3>RAG Document Search</h3>
+          <p class="muted">Semantic search across 24k engineering docs with FAISS and LLMs, improving recall@10 by 31%.</p>
+          <p><a href="https://github.com/yourname/rag-search" target="_blank" rel="noopener">Code →</a></p>
+        </article>
+        <article class="card">
+          <h3>Delta Line Optimizer</h3>
+          <p class="muted">Attendance-based operator-station assignment tool built in Python with Pandas and Excel I/O.</p>
+          <p><a href="https://github.com/yourname/delta-optimizer" target="_blank" rel="noopener">Code →</a></p>
+        </article>
+        <article class="card">
+          <h3>Redhawk Trip Analysis</h3>
+          <p class="muted">Telemetry analysis highlighting temperature exceedances and generating daily summaries.</p>
+          <p><a href="https://github.com/yourname/redhawk-trip-analysis" target="_blank" rel="noopener">Code →</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="grid two">
+        <div class="card">
+          <p class="muted">Best way to reach me:</p>
+          <p>Email: <a href="mailto:pra24@tamu.edu">pra24@tamu.edu</a><br>LinkedIn: <a href="https://linkedin.com/in/prachi-dudhe" target="_blank" rel="noopener">linkedin.com/in/prachi-dudhe</a><br>GitHub: <a href="https://github.com/prachidudhe" target="_blank" rel="noopener">github.com/prachidudhe</a></p>
+        </div>
+        <form class="card" onsubmit="event.preventDefault(); alert('Thanks! This demo does not send email.');">
+          <label>Name<br><input required style="width:100%;padding:10px;border-radius:10px;border:1px solid rgba(0,0,0,.16);background:transparent;color:var(--fg)"/></label>
+          <br><br>
+          <label>Email<br><input type="email" required style="width:100%;padding:10px;border-radius:10px;border:1px solid rgba(0,0,0,.16);background:transparent;color:var(--fg)"/></label>
+          <br><br>
+          <label>Message<br><textarea required rows="4" style="width:100%;padding:10px;border-radius:10px;border:1px solid rgba(0,0,0,.16);background:transparent;color:var(--fg)"></textarea></label>
+          <br>
+          <button class="btn primary" type="submit">Send</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">© <span id="y"></span> Prachi Dudhe · Built with ♥ and GitHub Pages</div>
+  </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
